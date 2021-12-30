@@ -22,9 +22,9 @@ class SettingBase(TestCase):
 
 
 # 這邊繼承剛剛的寫的 SettingBase class，接下來會把測試都寫在這裡
-class CheckObjectDetection(SettingBase):
+class CheckIndex(SettingBase):
     def test_index(self):
-        response = self.detect()
+        response = self.index()
         data = json.loads(response.data.decode('utf-8'))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(data['success'], True)

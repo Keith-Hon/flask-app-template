@@ -3,8 +3,6 @@ from flask import Flask, request
 import json
 
 def create_app(config_name):
-    from .lib.detector import ObjectDetector
-    detector = ObjectDetector()
     app = Flask(__name__)
 
     @app.route("/", methods=['GET'])
